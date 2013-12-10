@@ -1,0 +1,16 @@
+<h2>Sendte beskjeder via unn-kampanjen</h2>
+
+<ol class="list-unstyled unstyled">
+	{% for message in messages %}
+	<li class="message well well-mini">
+		<div class="sendtype"><img src="/wp-content/plugins/UKMunn_wp/resources/{{message.send_type}}.png" /></div>
+		<div class="meta">
+			<div class="to">{{message.recipient}}<span class="metato">{{message.send_to}}</span>
+			<div class="from">{{message.sender}}</div>
+		</div>
+		<div class="clearfix"></div>
+		<div class="messagebody">{{message.message}}</div>
+		<div class="clearfix"></div>
+	</li>
+	{% endfor %}
+</ol>

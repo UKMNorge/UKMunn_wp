@@ -1,0 +1,33 @@
+.message {
+ margin-left: 80px;
+}
+.message .sendtype {
+ float: left;
+ margin-left: -100px;
+}
+
+.message .to:before {
+ content: 'til:';
+ font-size: 12px;
+ font-weight: normal;
+ margin-right: 10px;
+}
+.message .to {
+ font-size: 18px;
+}
+.message .metato {
+ font-size: 12px;
+ margin-left: 10px;
+}
+
+.message .from:before {
+ content: 'fra:';
+ font-size: 12px;
+ font-weight: normal;
+ margin-right: 5px;
+}
+
+.message .messagebody {
+ margin: 0px;
+ margin-top: -20px;
+}
