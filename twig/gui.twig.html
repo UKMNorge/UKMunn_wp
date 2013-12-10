@@ -9,7 +9,7 @@
 			<div class="from">{{message.sender}}</div>
 		</div>
 		<div class="clearfix"></div>
-		<div class="messagebody">{{message.message}}</div>
+		<div class="messagebody">{{message.message is empty ? 'Standardmelding ble brukt' : message.message}}</div>
 		<div class="clearfix"></div>
 	</li>
 	{% endfor %}
