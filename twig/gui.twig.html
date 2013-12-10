@@ -5,7 +5,7 @@
 	<li class="message well well-mini">
 		<div class="sendtype"><img src="/wp-content/plugins/UKMunn_wp/resources/{{message.send_type}}.png" alt="{{message.send_type}}" title="{{message.send_type}}" /></div>
 		<div class="meta">
-			<div class="to">{{message.recipient}}<span class="metato">{{message.send_to}}</span>
+			<div class="to">{{message.recipient}}<span class="metato">{{message.send_to == 'unknown' ? message.send_type : message.send_to}}</span>
 			<div class="from">{{message.sender}}</div>
 		</div>
 		<div class="clearfix"></div>
