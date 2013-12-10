@@ -19,7 +19,7 @@ if(is_admin()) {
 }
 
 function UKMunn_menu() {
-	$page = add_menu_page('UNN UKM', 'UNN-kampanje', 'administrator', 'UKMunn','UKMunn', 'http://ico.ukm.no/support-16.png',119);
+	$page = add_menu_page('UNN UKM', 'UNN-kampanje', 'administrator', 'UKMunn','UKMunn', '/wp-content/plugins/UKMunn_wp/resources/favicon-16.png',119);
 	add_action( 'admin_print_styles-' . $page, 'UKMunn_scripts_and_styles' );
 }
 
