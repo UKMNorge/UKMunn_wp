@@ -3,7 +3,7 @@
 <ol class="list-unstyled unstyled UKMwidth">
 	{% for message in messages %}
 	<li class="message well well-mini">
-		<div class="pull-right">{{ message.timestamp|date('d.m.Y H:i')}}</div>
+		<div class="pull-right">{% if message.timestamp is empty %}ikke sendt{% else %}{{ message.timestamp|date('d.m.Y H:i')}}{% endif %}</div>
 		<div class="sendtype"><img src="/wp-content/plugins/UKMunn_wp/resources/{{message.send_type}}.png" alt="{{message.send_type}}" title="{{message.send_type}}" /></div>
 		<div class="meta">
 			<div class="to">{{message.recipient}}<span class="metato">{{message.send_to == 'unknown' ? message.send_type : message.send_to}}</span>
