@@ -11,7 +11,7 @@ Author URI: http://www.ukm-norge.no
 if(is_admin()) {
 	global $blog_id;
 	if( $blog_id == 1 ) {
-		add_action('admin_menu', 'UKMunn_menu');
+		add_action('UKM_admin_menu', 'UKMunn_menu');
 		
 		add_action('wp_ajax_UKMunn_load', 'UKMunn_ajax_load');
 		add_action('wp_ajax_UKMunn_action', 'UKMunn_ajax_action');
@@ -19,8 +19,8 @@ if(is_admin()) {
 }
 
 function UKMunn_menu() {
-	$page = add_menu_page('UNN UKM', 'UNN-kampanje', 'administrator', 'UKMunn','UKMunn', '/wp-content/plugins/UKMunn_wp/resources/favicon-16.png',119);
-	add_action( 'admin_print_styles-' . $page, 'UKMunn_scripts_and_styles' );
+	UKM_add_menu_page('resources', 'UNN UKM', 'UNN-kampanje', 'administrator', 'UKMunn','UKMunn', '/wp-content/plugins/UKMunn_wp/resources/favicon-16.png',20);
+	UKM_add_scripts_and_styles('UKMunn', 'UKMunn_scripts_and_styles' );
 }
 
 function UKMunn() {
